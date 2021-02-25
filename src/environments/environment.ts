@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   url: 'https://wordsapiv1.p.rapidapi.com',
-  apiKey: 'e169b3bf4dmsh7f8046088af722dp12eda8jsnd6242398cc49'
+  apiKey: 'e169b3bf4dmsh7f8046088af722dp12eda8jsnd6242398cc49',
+  giphyAPIKey: 'i3yf1GaR5sY4mnsQ1xg22WvqVqmxVvVI',
 };
 
 /*
