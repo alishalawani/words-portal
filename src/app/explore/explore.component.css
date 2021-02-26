@@ -1,0 +1,13 @@
+.form-container{
+    height: 100px;
+    justify-content: center;
+    color: black;
+}
+.input-box{
+    width: 250px;
+    height: 40px;
+    border-radius: 20px;
+}
+.button{
+    color: white;
+}

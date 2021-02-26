@@ -1,25 +1,7 @@
-<div class='word-detail'>
-    <dl class="row">
-      
-        <dt class="col-sm-3"> {{ word }} </dt>
-        <dd class="col-sm-9">
-          <p> {{ definition }} </p>
-        </dd>
-        
-      
-        <dt class="col-sm-3">Synonyms:</dt>
-        <dd class="col-sm-9"><p> <i *ngFor='let synonym of synonyms'> {{synonym}} - </i> </p></dd>
-      
-        <dt class="col-sm-3 " *ngIf='partOfSpeech'> Part of speech: </dt>
-        <dd class="col-sm-9" *ngIf='partOfSpeech'> {{ partOfSpeech }} </dd>
-      
-        <dt class="col-sm-3" *ngIf='extraResult'>Other definition</dt>
-        <dd class="col-sm-9" *ngIf='extraResult'>
-          <dl class="row">
-            <dd class="col-sm-8">{{ extraResult.definition }}</dd>
-          </dl>
-        </dd>
-      </dl>
-      <button (click)='seeGifs(word)'> See related Memes</button>
-    
-</div>
+<wp-word-info [word]='word' 
+    [definition]='definition' 
+    [synonyms]='synonyms' 
+    [partOfSpeech]='partOfSpeech' 
+    [extraResult]='extraResult' 
+    [seeGifs]='seeGifs'>
+</wp-word-info>

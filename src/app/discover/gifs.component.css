@@ -1,6 +1,3 @@
-.gifs-container{
-   
-}
 .form-container{
     height: 100px;
     justify-content: center;
@@ -14,10 +11,14 @@
 .button{
     color: white;
 }
-.gifs{
+.gifs-container{
     width: 100%;
     background-color: black;
     min-height: 100vh;
+}
+.gifs{
+    max-width: 95%;
+    margin: 0 auto;
 }
 .gif{
     width: 95%;

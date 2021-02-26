@@ -31,7 +31,6 @@ export class WordDetailComponent implements OnInit {
         this.definition = this.results.definition
         this.synonyms = this.results.synonyms;
         this.partOfSpeech = this.results.partOfSpeech;
-        console.log('result: ' + JSON.stringify(this.results))
         this.extraResult = word.results[1];
        },
       error: err => this.errorMessage = err

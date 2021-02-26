@@ -13,6 +13,7 @@ export class DiscoverComponent implements OnInit {
     'serendipity',
     'scrumptious',
   ]
+  
 
   constructor() { }
 

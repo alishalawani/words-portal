@@ -11,5 +11,16 @@
         </div>
     </div>
 
-    <wp-word-detail [word]='word'></wp-word-detail>
+    <div>
+        <div class="container" >
+            <wp-word-info [word]='word' 
+                [definition]='definition' 
+                [synonyms]='synonyms' 
+                [partOfSpeech]='partOfSpeech' 
+                [extraResult]='extraResult' 
+                [seeGifs]='seeGifs'
+            >
+            </wp-word-info>
+        </div>
+    </div>
 </div>

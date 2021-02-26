@@ -9,6 +9,7 @@ import { ExploreComponent } from './explore/explore.component';
 import { WordDetailComponent } from './shared/word-detail.component';
 import { DiscoverComponent } from './discover/discover.component';
 import { GifsComponent } from './discover/gifs.component';
+import { WordInfoComponent } from './shared/word-info.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { GifsComponent } from './discover/gifs.component';
     WordDetailComponent,
     DiscoverComponent,
     GifsComponent,
+    WordInfoComponent,
   ],
   imports: [
     BrowserModule,

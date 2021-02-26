@@ -25,7 +25,7 @@ export class WordService {
         ['useQueryString']: 'true'
       },
     }
-    return this.http.get<any>(this.wordUrl+word,options).pipe(tap(data => console.log('Word Detail: ' + JSON.stringify(data))), catchError(this.handleError))
+    return this.http.get<any>(this.wordUrl+word,options).pipe(catchError(this.handleError))
   }
 
   private handleError = (err: HttpErrorResponse) => {

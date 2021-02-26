@@ -36,7 +36,6 @@ export class GifsComponent implements OnInit {
     this.gifsService.getGifs(this.word).subscribe({
       next: result => {
         this.gifs = result.data;
-        console.log(this.gifs)
       },
       error: error => this.errorMessage = error
     })
