@@ -7,7 +7,9 @@ import { ExploreComponent } from './explore/explore.component';
 const routes: Routes = [
   { path: 'explore', component: ExploreComponent },
   { path: 'discover', component: DiscoverComponent },
-  {path: 'gifs/:word', component: GifsComponent}
+  {path: 'gifs/:word', component: GifsComponent},
+  {path: '', redirectTo:'discover', pathMatch: 'full'},
+  {path: '**', redirectTo: 'discover', pathMatch: 'full'}
 ];
 
 @NgModule({

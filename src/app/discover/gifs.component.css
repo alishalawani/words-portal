@@ -1,0 +1,30 @@
+.gifs-container{
+   
+}
+.form-container{
+    height: 100px;
+    justify-content: center;
+    color: white;
+}
+.input-box{
+    width: 250px;
+    height: 40px;
+    border-radius: 20px;
+}
+.button{
+    color: white;
+}
+.gifs{
+    width: 100%;
+    background-color: black;
+    min-height: 100vh;
+}
+.gif{
+    width: 95%;
+    height: 95%;
+    margin: 0 auto;
+}
+.gif-holder{
+    padding: 20px;
+    max-height: 450px;
+}

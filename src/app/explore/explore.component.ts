@@ -6,15 +6,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./explore.component.css']
 })
 export class ExploreComponent implements OnInit {
+  word: string;
   
-
-  // create a different component that is going to be mapped to display an accordion
-  // of the details of a word.
-
+  private _searchValue: string = 'trending';
+  get searchValue(): string{
+    return this._searchValue;
+  }
+  set searchValue(value: string){
+    this._searchValue = value;
+  }
   
   constructor(){}
 
+  onSearch():void{
+    this.word = this.searchValue;
+  }
+
   ngOnInit(): void {
+    this.word = this.searchValue;
   }
 
 }
