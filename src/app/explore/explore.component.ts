@@ -18,7 +18,7 @@ export class ExploreComponent implements OnInit {
 
 
   
-  private _searchValue: string = 'trending';
+  private _searchValue: string = 'portal';
   get searchValue(): string{
     return this._searchValue;
   }

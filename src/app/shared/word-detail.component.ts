@@ -19,7 +19,7 @@ export class WordDetailComponent implements OnInit {
 
   constructor(private wordSerivice: WordService, private router: Router) { }
 
-  seeGifs(word: string):void{
+  seeGifs = (word: string):void => {
     this.router.navigate([`/gifs/${word}`])
   }
 
