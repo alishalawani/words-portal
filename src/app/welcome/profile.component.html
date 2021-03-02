@@ -1,0 +1,23 @@
+<div class="container">
+    <h1>Profile</h1>
+<!-- A MODEL DRIVEN FORM -->
+<hr>
+<div class="col-md-4">
+    <form [formGroup]="profileForm"  (ngSubmit)="saveProfile(profileForm.value)" autocomplete="off">
+        <div class="form-group">
+            <label for="firstName">First Name: </label>
+            <!-- <em>Required</em> -->
+            <input  formControlName='firstName' required name="firstName" type="text" id="firstName" class="form-control" placeholder="First Name..."/>
+
+        </div>
+        <div class="form-group">
+            <label for="lastName">Last Name: </label>
+            <!-- <em >Required</em> -->
+            <input formControlName='lastName'  required name="lastName" type="lastName" id="lastName" class="form-control" placeholder="Last Name..."/>
+        </div>
+        <span ><button type="submit"  class="btn btn-primary">Save</button>
+</span>
+        <button type="submit" class="btn btn-default"> Cancel</button>
+    </form>
+</div>
+</div>
