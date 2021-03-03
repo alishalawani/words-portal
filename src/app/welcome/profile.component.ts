@@ -14,12 +14,26 @@ export class ProfileComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.firstName = new FormControl("", [Validators.required, Validators.pattern('[a-zA-Z].*')]);
+    this.firstName = new FormControl("", [Validators.required, Validators.pattern('[a-zA-Z].*'), this.containsRestrictedWords(['name', 'alias'])]);
     this.lastName = new FormControl("", [Validators.required, Validators.pattern('[a-zA-Z].*')]);
     this.profileForm = new FormGroup({
       firstName: this.firstName,
       lastName: this.lastName
     })
+  }
+  // a custom validator
+  // containsTheWordName(control: FormControl): {[key:string]:any}{
+  //   return control.value.includes('name') ? {'restrictedWord': 'name'}: null;
+  // }
+
+  containsRestrictedWords(words){
+    return (control:FormControl): {[key:string]:any}=>{
+      if(!words) return null
+
+      var invalidWords = words.map(w => control.value.includes(w)? w : null).filter(w => w != null)
+
+      return invalidWords && invalidWords.length > 0 ? {'restrictedWords': invalidWords.join(', ')} : null;
+    }
   }
   saveProfile(formValues){
     if(this.profileForm.valid){

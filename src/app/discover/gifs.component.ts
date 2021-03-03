@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { GifsService } from './gifs.service';
 
 @Component({
@@ -20,25 +20,30 @@ export class GifsComponent implements OnInit {
   }
 
 
-  constructor(private route: ActivatedRoute, private router: Router, private gifsService: GifsService) {
-    this.router.routeReuseStrategy.shouldReuseRoute = () => {
-      return false;
-    };
-  }
+  constructor(private route: ActivatedRoute, private router: Router, private gifsService: GifsService) {}
 
    onSearch():void{
      this.router.navigate([`/gifs/${this.searchValue}`])
    }
 
   ngOnInit(): void {
-    this.word = this.route.snapshot.paramMap.get('word');
-    this.searchValue = this.word;
-    this.gifsService.getGifs(this.word).subscribe({
-      next: result => {
-        this.gifs = result.data;
-      },
-      error: error => this.errorMessage = error
+
+    // to make it possible to route to the same component
+    this.route.params.forEach((params: Params)=>{
+      //reset all your pieces of state here
+      this.word = params['word'];
+      this.searchValue = this.word;
+      this.gifsService.getGifs(this.word).subscribe({
+        next: result => {
+          this.gifs = result.data;
+        },
+        error: error => this.errorMessage = error
+      })
     })
+
+    // use this when you have no reason to navigate to the same component
+    // this.word = this.route.snapshot.paramMap.get('word');
+   
   }
 
 }
