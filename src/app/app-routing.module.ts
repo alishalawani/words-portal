@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DiscoverComponent } from './discover/discover.component';
 import { GifsComponent } from './discover/gifs.component';
 import { ExploreComponent } from './explore/explore.component';
-import { EventComponent } from './welcome/event.component';
+import { NewEventComponent } from './welcome/new-event.component';
 import { ProfileComponent } from './welcome/profile.component';
 
 const routes: Routes = [
@@ -11,7 +11,6 @@ const routes: Routes = [
   { path: 'discover', component: DiscoverComponent },
   {path: 'gifs/:word', component: GifsComponent},
   {path: 'profile', component: ProfileComponent},
-  {path: 'event', component: EventComponent},
   {path: '', redirectTo:'discover', pathMatch: 'full'},
   {path: '**', redirectTo: 'discover', pathMatch: 'full'}
 ];
