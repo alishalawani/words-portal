@@ -6,8 +6,8 @@
     <form [formGroup]="profileForm"  (ngSubmit)="saveProfile(profileForm.value)" autocomplete="off">
         <div class="form-group" [ngClass]="{'error': !validateFirstName() }">
             <label for="firstName">First Name: </label>
-            <em *ngIf="!validateFirstName() && profileForm.controls.firstName.errors.required">Required</em>
-            <em *ngIf="!validateFirstName() && profileForm.controls.firstName.errors.pattern">Must start with a letter</em>
+            <div *ngIf="!validateFirstName() && profileForm.controls.firstName.errors.required">Required</div>
+            <div *ngIf="!validateFirstName() && profileForm.controls.firstName.errors.pattern">Must start with a letter</div>
 
             <input  formControlName='firstName' required name="firstName" type="text" id="firstName" class="form-control" placeholder="First Name..."/>
 
