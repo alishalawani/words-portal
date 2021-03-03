@@ -5,11 +5,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./new-event.component.css']
 })
 export class NewEventComponent implements OnInit {
-  event
+  event:any
 
   constructor() { }
 
   ngOnInit(): void {
+    this.event = {
+      eventName: 'Special',
+      eventLocation: 'Paris'
+    }
   }
 
   saveEvemt(eventFormValue){

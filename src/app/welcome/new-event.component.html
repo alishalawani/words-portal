@@ -9,14 +9,14 @@
             <em *ngIf="eventForm.controls.eventName?.invalid && (eventForm.controls.eventName?.touched)">Required</em>
             <!-- <em *ngIf="eventForm">Must start with a letter</em> -->
 
-            <input  (ngModel)="event.eventName" required name="eventName" type="text" id="eventName" class="form-control" placeholder="Event Name..."/>
+            <input  [(ngModel)]="event.eventName" required name="eventName" type="text" id="eventName" class="form-control" placeholder="Event Name..."/>
 
         </div>
         <div class="form-group" [ngClass]="{'error': eventForm.controls.eventLocation?.invalid && (eventForm.controls.eventLocation?.touched)}">
             <label for="eventLocation">Event Location: </label>
             <em *ngIf="eventForm.controls.eventLocation?.invalid && eventForm.controls.eventLocation?.touched">Required</em>
             <!-- <em >Must start with a letter</em> -->
-            <input (ngModel)="event.eventLocation"  required name="eventLocation" type="eventLocation" id="eventLocation" class="form-control" placeholder="Event Location..."/>
+            <input [(ngModel)]="event.eventLocation"  required name="eventLocation" type="eventLocation" id="eventLocation" class="form-control" placeholder="Event Location..."/>
         </div>
         <span ><button type="submit"  class="btn btn-primary">Register</button>
 </span>
