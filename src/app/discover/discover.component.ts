@@ -6,18 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./discover.component.css']
 })
 export class DiscoverComponent implements OnInit {
-  rarelyUsedWords: string[] = [
-    'cavil',
-    'churlish',
-    'beldam',
-    'serendipity',
-    'scrumptious',
-  ]
+  rarelyUsedWords: string[];
   
 
   constructor() { }
 
   ngOnInit(): void {
+    this.rarelyUsedWords = [
+      'cavil',
+      'churlish',
+      'beldam',
+      'serendipity',
+      'scrumptious',
+    ]
   }
 
 }

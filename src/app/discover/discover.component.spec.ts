@@ -2,24 +2,30 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DiscoverComponent } from './discover.component';
 
+//isolated test version
+
 describe('DiscoverComponent', () => {
   let component: DiscoverComponent;
-  let fixture: ComponentFixture<DiscoverComponent>;
-
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ DiscoverComponent ]
-    })
-    .compileComponents();
-  });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DiscoverComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    component = new DiscoverComponent()
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+  it('should contain the right words in its rarelyUsedWords array', ()=>{
+    component.rarelyUsedWords  = [
+      'cavil',
+      'churlish',
+      'beldam',
+      'serendipity',
+      'scrumptious',
+    ];
+    expect(component.rarelyUsedWords).toEqual([
+      'cavil',
+      'churlish',
+      'beldam',
+      'serendipity',
+      'scrumptious',
+    ])
+  })
+  
 });

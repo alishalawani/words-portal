@@ -1,7 +1,10 @@
 <div>
     <h2 class="heading">Discover some words you probably haven't heard of!</h2>
-    <div class="container" *ngFor='let word of rarelyUsedWords'>
-        <wp-word-detail [word]='word'>
+    <div class="container">
+        <wp-word-detail *ngFor="let word of rarelyUsedWords" [word]="word">
         </wp-word-detail>
     </div>
+    <ul><li *ngFor="let word of rarelyUsedWords">
+        {{word}}
+    </li></ul>
 </div>

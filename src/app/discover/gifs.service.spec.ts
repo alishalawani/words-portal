@@ -10,7 +10,5 @@ describe('GifsService', () => {
     service = TestBed.inject(GifsService);
   });
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
+  
 });
